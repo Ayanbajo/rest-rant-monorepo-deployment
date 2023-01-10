@@ -1,13 +1,13 @@
 require('dotenv').config()
 
 module.exports = {
-  "development": {
-    "username": process.env.DB_USERNAME,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_DATABASE,
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
+  // "development": {
+  //   "username": process.env.DB_USERNAME,
+  //   "password": process.env.DB_PASSWORD,
+  //   "database": process.env.DB_DATABASE,
+  //   "host": "127.0.0.1",
+  //   "dialect": "postgres"
+  // },
   "test": {
     "username": "root",
     "password": null,
@@ -15,11 +15,23 @@ module.exports = {
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
+
   "production": {
-    "username": process.env.DB_USERNAME,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_DATABASE,
-    "host": "127.0.0.1",
+    "username": process.env.RDS_USERNAME,
+    "password": process.env.RDS_PASSWORD,
+    "database": process.env.RDS_DB_NAME,
+    "host": process.env.RDS_HOSTNAME,
+    "port": process.env.RDS_PORT,
     "dialect": "postgres"
   }
+  // "production": {
+  //   "username": process.env.DB_USERNAME,
+  //   "password": process.env.DB_PASSWORD,
+  //   "database": process.env.DB_DATABASE,
+  //   "host": process.env.DB_HOSTNAME,
+  //   "port": process.env.DB_PORT,
+  //   "dialect": "postgres"
+  // }
 }
+
+
